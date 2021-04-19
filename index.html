@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Forjagás</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <style>
+        @import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
+    </style>
+
+    <script>
+
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="fixed-top d-none d-md-block">
+            <div class="navbar-fixed-top">
+                <nav class="navbar navbar-expand-md">
+                    <a class="navbar-brand" href="#"><img id="home" onclick="goHome()" src="img/logo.png"
+                            style="width: 10%;" alt="logo"></a>
+                    <ul class="navbar-nav my-auto">
+                        <li class="navbar-text px-4">
+                            <a class="nav-link" href="#" onclick="goSobre()"
+                                style="font-size:1em; font-weight: 300; width:110px;">SOBRE
+                                NÓS</a>
+                        </li>
+                        <li class="navbar-text px-4">
+                            <a class="nav-link" href="#" onclick="goCliAc()"
+                                style="font-size:1em; font-weight: 300; width:270px;">CLIMATIZAÇÃO E
+                                AQUECIMENTO</a>
+                        </li>
+                        <li class="navbar-text px-4">
+                            <a class="nav-link" href="#" onclick="goEletrodomesticos()"
+                                style="font-size:1em; font-weight: 300;">ELETRODOMÉSTICOS</a>
+                        </li>
+                        <li class="navbar-text px-4">
+                            <a class="nav-link" href="#" onclick="goGas()"
+                                style="font-size:1em; font-weight: 300;">GÁS</a>
+                        </li>
+                        <li class="navbar-text px-4">
+                            <a class="nav-link" href="#" onclick="goAssistencia()"
+                                style="font-size:1em; font-weight: 300;">ASSISTÊNCIA</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <section class="tag" style="background-color: #fff;">
+            <div class="content-wrapper">
+                <div class="content-title">
+                    <img src="img/logo_txt.png" style="width: 35%;" alt="logo">
+                </div>
+            </div>
+        </section>
+
+        <section class="tag" style="background-color: #f4f4f4;" id="sobre">
+            <div class="content-wrapper">
+                <div class="d-none d-md-block">
+                    <div class="row align-items-center" style="margin-top: 8%;">
+                        <div class="col-12 my-auto">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-6 text-left">
+                                        <img src="img/forjagas_txt.png" style="width: 50%;" alt="logo">
+                                    </div>
+                                    <div class="col-6 text-right">
+                                        <img src="img/certif.png" class="px-2" style="width: 14%;" alt="certif">
+                                        <img src="img/impic.png" class="px-2" style="width: 15%;" alt="impic">
+                                        <img src="img/dge.png" class="px-2" style="width: 20%;" alt="dge">
+                                        <img src="img/20anos.png" class="px-2" style="width: 12%;" alt="20anos">
+                                    </div>
+                                    <hr style="width: 100%; border: 1px solid #023E8D; margin-left: 0;">
+                                </div>
+                                <div class="pt-2" style="width: 100%;">
+                                    <p class="card-text text-left" style="font-weight: 300; font-size: 1em;">
+                                        Comércio de Eletrodomésticos, Gás e Pellets.
+                                        <br>
+                                        Montagem e reparação de electrodomésticos e de outros equipamentos de uso
+                                        doméstico, de
+                                        linha branca e castanha.
+                                        <br>
+                                        Venda e instalação de sistemas de climatização, caldeiras e salamandras de
+                                        pellets,
+                                        recuperadores de calor, esquentadores, emissores térmicos, antenas e
+                                        parabólicas.
+                                        <br>
+                                        Venda e Distribuição de Gás e Pellets.
+                                        <br>
+                                        Venda e Montagem de Fogões e Trempes Industriais, Varinhas e Robôs de Cozinha,
+                                        Máquinas
+                                        de Loiça, Máquinas de Gelo, Arcas e Vitrines e Balcões Frigoríficos de nível
+                                        Profissional e Hoteleiro.
+                                        <br>
+                                        Venda de produtos para o Lar.
+                                    </p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="row pt-5">
+                            <div class="col-4 text-center">
+                                <p id="title" style="font-size: 1.5em;">Endereço</p>
+                                <p style="font-weight: 300; font-size: 1em;">
+                                    <i class="fa fa-map-marker"
+                                        style="font-size:1.1em; margin-right: 2.5%; color: #023E8D;"></i>
+                                    R. Padre Joaquim Lima, 141
+                                    <br>
+                                    Forjães - Esposende
+                                </p>
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d745.8430045387356!2d-8.74289037080814!3d41.60446639870284!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd25b35dd4333701%3A0xa95d8a223f199b36!2sR.+Padre+Joaquim+Lima%2C+Forj%C3%A3es!5e0!3m2!1spt-PT!2spt!4v1485219229036"
+                                    width="300" height="150" frameborder="0" style="border:0" allowfullscreen></iframe>
+                            </div>
+                            <div class="col-4 text-center">
+                                <p id="title" style="font-size: 1.5em;">Horário de Funcionamento</p>
+                                <p style="font-weight: 300; font-size: 1em;">
+                                    Segunda a Sábado
+                                    <br>
+                                    <span style="font-weight: 400; font-size: 1.2em;">09:00h às 19:00h</span>
+                                    <br>
+                                    <br>
+                                    Pausa para almoço
+                                    <br>
+                                    <span style="font-weight: 400; font-size: 1.2em;">12:30h às 14:00h</span>
+                                </p>
+                            </div>
+                            <div class="col-4 text-center">
+                                <p id="title" style="font-size: 1.5em;">Contactos</p>
+                                <p style="font-weight: 300; font-size: 1em;">
+                                    <i class="fa fa-phone"
+                                        style="font-size:1.1em; margin-right: 2.5%; color: #023E8D;"></i>
+                                    253 877 282
+                                    <br>
+                                    <i class="fa fa-mobile"
+                                        style="font-size:1.1em; margin-right: 2.5%; color: #023E8D;"></i>
+                                    934 580 512
+                                    <br>
+                                    <i class="fa fa-mobile"
+                                        style="font-size:1.1em; margin-right: 2.5%; color: #023E8D;"></i>
+                                    913 376 590
+                                    <br>
+                                    <i class="fa fa-at"
+                                        style="font-size:1.1em; margin-right: 2.5%; color: #023E8D;"></i>
+                                    forjagas@sapo.pt
+                                    <br>
+                                    <a href="https://www.facebook.com/forjagas" target="_blank">
+                                        <i class="fa fa-facebook-square"
+                                            style="font-size:1.1em; margin-right: 2.5%; color: #023E8D;"></i>
+                                        @forjagas</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="tag" style="background-color: #fff;" id="climatizacaoaquecimento">
+            <div class="container content-wrapper">
+                <div class="d-none d-md-block">
+                    <div class="row align-items-center" style="margin-top: 8%;">
+                        <div class="col-12">
+                            <p id="title" style="font-size: 2em;">CLIMATIZAÇÃO E AQUECIMENTO</p>
+                            <hr style="width: 100%; border: 1px solid #023E8D; margin-left: 0;">
+
+                        </div>
+                    </div>
+                    <div class="d-none d-md-block">
+                        <div class="row mt-4">
+                            <div class="col-6">
+                                <div class="card text-center" style="border: 0; box-shadow: -10px 13px 13px #888888;">
+                                    <div style="background-color: #f4f4f4;">
+                                        <img src="img/ac.png" class="card-img-top" alt="ac">
+                                        <p class="card-title" style="font-weight: 500; font-size: 1.5em;">Ar
+                                            Condicionados</p>
+                                    </div>
+                                    <div class="card-body"
+                                        style="background-color: #ffffff; border-top: 1px solid #e0e2e3;">
+                                        <p class="card-text">
+                                            <img src="img/mitsubishi.png" class="px-2" style="width: 20%;"
+                                                alt="mitsubishi">
+                                            <img src="img/gree.png" class="px-2" style="width: 20%;" alt="gree">
+                                            <img src="img/daikin.png" class="px-2" style="width: 20%;" alt="daikin">
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-6">
+                                <div class="card text-center" style="border: 0; box-shadow: -10px 13px 13px #888888;">
+                                    <div style="background-color: #f4f4f4;">
+                                        <img src="img/bombas_calor.png" class="card-img-top" alt="bombascalor">
+                                        <p class="card-title" style="font-weight: 500; font-size: 1.5em;">Bombas de
+                                            Calor</p>
+                                    </div>
+                                    <div class="card-body"
+                                        style="background-color: #ffffff; border-top: 1px solid #e0e2e3;">
+                                        <p class="card-text">
+                                            <img src="img/mitsubishi.png" class="px-2" style="width: 20%;"
+                                                alt="mitsubishi">
+                                            <img src="img/gree.png" class="px-2" style="width: 20%;" alt="gree">
+                                            <img src="img/daikin.png" class="px-2" style="width: 20%;" alt="daikin">
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mt-4">
+                            <div class="col-6">
+                                <div class="card text-center" style="border: 0; box-shadow: -10px 13px 13px #888888;">
+                                    <div style="background-color: #f4f4f4;">
+                                        <img src="img/cald_salam_pellets.png" class="card-img-top"
+                                            alt="caldsalampellets">
+                                        <p class="card-title" style="font-weight: 500; font-size: 1.5em;">Caldeiras e
+                                            Salamandras de
+                                            Pellets</p>
+                                    </div>
+                                    <div class="card-body"
+                                        style="background-color: #ffffff; border-top: 1px solid #e0e2e3;">
+                                        <p class="card-text">
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-6">
+                                <div class="card text-center" style="border: 0; box-shadow: -10px 13px 13px #888888;">
+                                    <div style="background-color: #f4f4f4;">
+                                        <img src="img/esquentador.png" class="card-img-top" alt="esquentador">
+                                        <p class="card-title" style="font-weight: 500; font-size: 1.5em;">Caldeiras a
+                                            Gás e
+                                            Esquentadores</p>
+                                    </div>
+                                    <div class="card-body"
+                                        style="background-color: #ffffff; border-top: 1px solid #e0e2e3;">
+                                        <p class="card-text">
+                                            <img src="img/vaillant.png" class="px-2" style="width: 20%;" alt="vaillant">
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="tag" style="background-color: #f4f4f4;" id="eletrodomesticos">
+            <div class="content-wrapper">
+                <p class="content-title">ELETRODOMÉSTICOS</p>
+                <p class="content-subtitle">Nullam tristique urna sed tellus ornare congue. Etiam vitae erat at nibh
+                    aliquam
+                    dapibus.</p>
+            </div>
+        </section>
+
+        <section class="tag" style="background-color: #fff;" id="gas">
+            <div class="content-wrapper">
+                <div class="row" id="animated_pics">
+                    <div class="col-6">
+                        <img src="img/gas_txt.png" style="width: 75%;" alt="gas">
+                    </div>
+                    <div class="col-6 align-self-end" style="position: absolute; bottom: 0; right: 0;">
+                        <img src="img/botijas.png" style="width: 80%;" alt="botijas">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="tag" style="background-color: #f4f4f4;" id="assistencia">
+            <div class="content-wrapper">
+                <p class="content-title">ASSISTÊNCIA</p>
+                <p class="content-subtitle">Nullam tristique urna sed tellus ornare congue. Etiam vitae erat at nibh
+                    aliquam
+                    dapibus.</p>
+            </div>
+        </section>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.1/lodash.min.js"></script>
+    <script src="./parallax.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
