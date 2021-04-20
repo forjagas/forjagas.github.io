@@ -33,6 +33,13 @@ body .active {
     background-position: center center;
 }
 
+#eletrodomesticos {
+    background-image: url("img/eletrodomesticos.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
 .tag {
   overflow: hidden;
   will-change: transform;

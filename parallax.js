@@ -8,6 +8,7 @@ var totalSlideNumber = $(".tag").length;
 
 // ------------- DETERMINE DELTA/SCROLL DIRECTION ------------- //
 function parallaxScroll(evt) {
+
     if (isFirefox) {
         //Set delta for Firefox
         delta = evt.detail * (-120);
@@ -20,6 +21,7 @@ function parallaxScroll(evt) {
     }
 
     if (ticking != true) {
+
         if (delta <= -scrollSensitivitySetting) {
             //Down scroll
             ticking = true;
@@ -67,8 +69,7 @@ function goHome() {
     if (currentSlideNumber > 0) {
         var x;
         for (x = 0; x < currentSlideNumber; x++) {
-            var $currentSlide = $(".tag").eq(x);
-            $currentSlide.removeClass("down-scroll").addClass("up-scroll");
+            $(".tag").eq(x).removeClass("down-scroll").addClass("up-scroll");
         }
     }
     currentSlideNumber = 0;
@@ -82,8 +83,7 @@ function goSobre() {
     else {
         var x;
         for (x = 1; x < currentSlideNumber; x++) {
-            var $currentSlide = $(".tag").eq(x);
-            $currentSlide.removeClass("down-scroll").addClass("up-scroll");
+            $(".tag").eq(x).removeClass("down-scroll").addClass("up-scroll");
             currentSlideNumber = 1;
         }
     }
@@ -101,8 +101,7 @@ function goCliAc() {
     else {
         var x;
         for (x = 2; x < currentSlideNumber; x++) {
-            var $currentSlide = $(".tag").eq(x);
-            $currentSlide.removeClass("down-scroll").addClass("up-scroll");
+            $(".tag").eq(x).removeClass("down-scroll").addClass("up-scroll");
             currentSlideNumber = 2;
         }
     }
@@ -119,8 +118,7 @@ function goEletrodomesticos() {
     else {
         var x;
         for (x = 3; x < currentSlideNumber; x++) {
-            var $currentSlide = $(".tag").eq(x);
-            $currentSlide.removeClass("down-scroll").addClass("up-scroll");
+            $(".tag").eq(x).removeClass("down-scroll").addClass("up-scroll");
             currentSlideNumber = 3;
         }
     }
@@ -137,8 +135,7 @@ function goGas() {
     else {
         var x;
         for (x = 4; x < currentSlideNumber; x++) {
-            var $currentSlide = $(".tag").eq(x);
-            $currentSlide.removeClass("down-scroll").addClass("up-scroll");
+            $(".tag").eq(x).removeClass("down-scroll").addClass("up-scroll");
             currentSlideNumber = 4;
         }
     }
@@ -148,8 +145,7 @@ function goAssistencia() {
     if (currentSlideNumber < 5) {
         var x;
         for (x = currentSlideNumber; x < 5; x++) {
-            var $previousSlide = $(".tag").eq(x);
-            $previousSlide.removeClass("up-scroll").addClass("down-scroll");
+            $(".tag").eq(x).removeClass("up-scroll").addClass("down-scroll");
         }
     }
     currentSlideNumber = 5;
