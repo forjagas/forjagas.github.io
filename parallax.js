@@ -71,8 +71,8 @@ function goHome() {
         for (x = 0; x < currentSlideNumber; x++) {
             $(".tag").eq(x).removeClass("down-scroll").addClass("up-scroll");
         }
+        currentSlideNumber = 0;
     }
-    currentSlideNumber = 0;
 }
 
 function goSobre() {
@@ -84,8 +84,8 @@ function goSobre() {
         var x;
         for (x = 1; x < currentSlideNumber; x++) {
             $(".tag").eq(x).removeClass("down-scroll").addClass("up-scroll");
-            currentSlideNumber = 1;
         }
+        currentSlideNumber = 1;
     }
 
 }
@@ -93,7 +93,7 @@ function goSobre() {
 function goCliAc() {
     if (currentSlideNumber < 2) {
         var x;
-        for (x = 0; x < 2; x++) {
+        for (x = currentSlideNumber; x < 2; x++) {
             $(".tag").eq(x).removeClass("up-scroll").addClass("down-scroll");
         }
         currentSlideNumber = 2;
@@ -102,15 +102,15 @@ function goCliAc() {
         var x;
         for (x = 2; x < currentSlideNumber; x++) {
             $(".tag").eq(x).removeClass("down-scroll").addClass("up-scroll");
-            currentSlideNumber = 2;
         }
+        currentSlideNumber = 2;
     }
 }
 
 function goEletrodomesticos() {
     if (currentSlideNumber < 3) {
         var x;
-        for (x = 0; x < 3; x++) {
+        for (x = currentSlideNumber; x < 3; x++) {
             $(".tag").eq(x).removeClass("up-scroll").addClass("down-scroll");
         }
         currentSlideNumber = 3;
@@ -119,15 +119,15 @@ function goEletrodomesticos() {
         var x;
         for (x = 3; x < currentSlideNumber; x++) {
             $(".tag").eq(x).removeClass("down-scroll").addClass("up-scroll");
-            currentSlideNumber = 3;
         }
+        currentSlideNumber = 3;
     }
 }
 
 function goGas() {
     if (currentSlideNumber < 4) {
         var x;
-        for (x = 0; x < 4; x++) {
+        for (x = currentSlideNumber; x < 4; x++) {
             $(".tag").eq(x).removeClass("up-scroll").addClass("down-scroll");
         }
         currentSlideNumber = 4;
@@ -136,8 +136,8 @@ function goGas() {
         var x;
         for (x = 4; x < currentSlideNumber; x++) {
             $(".tag").eq(x).removeClass("down-scroll").addClass("up-scroll");
-            currentSlideNumber = 4;
         }
+        currentSlideNumber = 4;
     }
 }
 
@@ -147,8 +147,8 @@ function goAssistencia() {
         for (x = currentSlideNumber; x < 5; x++) {
             $(".tag").eq(x).removeClass("up-scroll").addClass("down-scroll");
         }
+        currentSlideNumber = 5;
     }
-    currentSlideNumber = 5;
 }
 
 
