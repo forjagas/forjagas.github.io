@@ -54,102 +54,168 @@ function slideDurationTimeout(slideDuration) {
 var mousewheelEvent = isFirefox ? "DOMMouseScroll" : "wheel";
 window.addEventListener(mousewheelEvent, _.throttle(parallaxScroll, 60), false);
 
+function assignActive() {
+    if (currentSlideNumber == 0) {
+        if (document.getElementById("nav_sobre").classList.contains("active") == true) {
+            document.getElementById("nav_sobre").classList.remove("active");
+        }
+        if (document.getElementById("nav_clim").classList.contains("active") == true) {
+            document.getElementById("nav_clim").classList.remove("active");
+        }
+        if (document.getElementById("nav_eletrodomesticos").classList.contains("active") == true) {
+            document.getElementById("nav_eletrodomesticos").classList.remove("active");
+        }
+        if (document.getElementById("nav_gas").classList.contains("active") == true) {
+            document.getElementById("nav_gas").classList.remove("active");
+        }
+        if (document.getElementById("nav_assistencia").classList.contains("active") == true) {
+            document.getElementById("nav_assistencia").classList.remove("active");
+        }
+    }
+    if (currentSlideNumber == 1) {
+        if (document.getElementById("nav_sobre").classList.contains("active") == false) {
+            document.getElementById("nav_sobre").classList.add("active");
+        }
+        if (document.getElementById("nav_clim").classList.contains("active") == true) {
+            document.getElementById("nav_clim").classList.remove("active");
+        }
+        if (document.getElementById("nav_eletrodomesticos").classList.contains("active") == true) {
+            document.getElementById("nav_eletrodomesticos").classList.remove("active");
+        }
+        if (document.getElementById("nav_gas").classList.contains("active") == true) {
+            document.getElementById("nav_gas").classList.remove("active");
+        }
+        if (document.getElementById("nav_assistencia").classList.contains("active") == true) {
+            document.getElementById("nav_assistencia").classList.remove("active");
+        }
+    }
+    if (currentSlideNumber == 2) {
+        if (document.getElementById("nav_sobre").classList.contains("active") == true) {
+            document.getElementById("nav_sobre").classList.remove("active");
+        }
+        if (document.getElementById("nav_clim").classList.contains("active") == false) {
+            document.getElementById("nav_clim").classList.add("active");
+        }
+        if (document.getElementById("nav_eletrodomesticos").classList.contains("active") == true) {
+            document.getElementById("nav_eletrodomesticos").classList.remove("active");
+        }
+        if (document.getElementById("nav_gas").classList.contains("active") == true) {
+            document.getElementById("nav_gas").classList.remove("active");
+        }
+        if (document.getElementById("nav_assistencia").classList.contains("active") == true) {
+            document.getElementById("nav_assistencia").classList.remove("active");
+        }
+    }
+    if (currentSlideNumber == 3) {
+        if (document.getElementById("nav_sobre").classList.contains("active") == true) {
+            document.getElementById("nav_sobre").classList.remove("active");
+        }
+        if (document.getElementById("nav_clim").classList.contains("active") == true) {
+            document.getElementById("nav_clim").classList.remove("active");
+        }
+        if (document.getElementById("nav_eletrodomesticos").classList.contains("active") == false) {
+            document.getElementById("nav_eletrodomesticos").classList.add("active");
+        }
+        if (document.getElementById("nav_gas").classList.contains("active") == true) {
+            document.getElementById("nav_gas").classList.remove("active");
+        }
+        if (document.getElementById("nav_assistencia").classList.contains("active") == true) {
+            document.getElementById("nav_assistencia").classList.remove("active");
+        }
+    }
+    if (currentSlideNumber == 4) {
+        if (document.getElementById("nav_sobre").classList.contains("active") == true) {
+            document.getElementById("nav_sobre").classList.remove("active");
+        }
+        if (document.getElementById("nav_clim").classList.contains("active") == true) {
+            document.getElementById("nav_clim").classList.remove("active");
+        }
+        if (document.getElementById("nav_eletrodomesticos").classList.contains("active") == true) {
+            document.getElementById("nav_eletrodomesticos").classList.remove("active");
+        }
+        if (document.getElementById("nav_gas").classList.contains("active") == false) {
+            document.getElementById("nav_gas").classList.add("active");
+        }
+        if (document.getElementById("nav_assistencia").classList.contains("active") == true) {
+            document.getElementById("nav_assistencia").classList.remove("active");
+        }
+    }
+    if (currentSlideNumber == 5) {
+        if (document.getElementById("nav_sobre").classList.contains("active") == true) {
+            document.getElementById("nav_sobre").classList.remove("active");
+        }
+        if (document.getElementById("nav_clim").classList.contains("active") == true) {
+            document.getElementById("nav_clim").classList.remove("active");
+        }
+        if (document.getElementById("nav_eletrodomesticos").classList.contains("active") == true) {
+            document.getElementById("nav_eletrodomesticos").classList.remove("active");
+        }
+        if (document.getElementById("nav_gas").classList.contains("active") == true) {
+            document.getElementById("nav_gas").classList.remove("active");
+        }
+        if (document.getElementById("nav_assistencia").classList.contains("active") == false) {
+            document.getElementById("nav_assistencia").classList.add("active");
+        }
+    }
+}
+
 // ------------- SLIDE MOTION ------------- //
 function nextItem() {
     var $previousSlide = $(".tag").eq(currentSlideNumber - 1);
     $previousSlide.removeClass("up-scroll").addClass("down-scroll");
+    assignActive()
 }
 
 function previousItem() {
     var $currentSlide = $(".tag").eq(currentSlideNumber);
     $currentSlide.removeClass("down-scroll").addClass("up-scroll");
+    assignActive()
 }
 
 function goHome() {
-    if (currentSlideNumber > 0) {
-        var x;
-        for (x = 0; x < currentSlideNumber; x++) {
-            $(".tag").eq(x).removeClass("down-scroll").addClass("up-scroll");
-        }
-        currentSlideNumber = 0;
-    }
+    navigation(0)
+    assignActive()
 }
 
 function goSobre() {
-    if (currentSlideNumber == 0) {
-        $(".tag").eq(0).removeClass("up-scroll").addClass("down-scroll");
-        currentSlideNumber = 1;
-    }
-    else {
-        var x;
-        for (x = 1; x < currentSlideNumber; x++) {
-            $(".tag").eq(x).removeClass("down-scroll").addClass("up-scroll");
-        }
-        currentSlideNumber = 1;
-    }
-
+    navigation(1)
+    assignActive()
 }
 
 function goCliAc() {
-    if (currentSlideNumber < 2) {
-        var x;
-        for (x = currentSlideNumber; x < 2; x++) {
-            $(".tag").eq(x).removeClass("up-scroll").addClass("down-scroll");
-        }
-        currentSlideNumber = 2;
-    }
-    else {
-        var x;
-        for (x = 2; x < currentSlideNumber; x++) {
-            $(".tag").eq(x).removeClass("down-scroll").addClass("up-scroll");
-        }
-        currentSlideNumber = 2;
-    }
+    navigation(2)
+    assignActive()
 }
 
 function goEletrodomesticos() {
-    if (currentSlideNumber < 3) {
-        var x;
-        for (x = currentSlideNumber; x < 3; x++) {
-            $(".tag").eq(x).removeClass("up-scroll").addClass("down-scroll");
-        }
-        currentSlideNumber = 3;
-    }
-    else {
-        var x;
-        for (x = 3; x < currentSlideNumber; x++) {
-            $(".tag").eq(x).removeClass("down-scroll").addClass("up-scroll");
-        }
-        currentSlideNumber = 3;
-    }
+    navigation(3)
+    assignActive()
 }
 
 function goGas() {
-    if (currentSlideNumber < 4) {
-        var x;
-        for (x = currentSlideNumber; x < 4; x++) {
-            $(".tag").eq(x).removeClass("up-scroll").addClass("down-scroll");
-        }
-        currentSlideNumber = 4;
-    }
-    else {
-        var x;
-        for (x = 4; x < currentSlideNumber; x++) {
-            $(".tag").eq(x).removeClass("down-scroll").addClass("up-scroll");
-        }
-        currentSlideNumber = 4;
-    }
+    navigation(4)
+    assignActive()
 }
 
 function goAssistencia() {
-    if (currentSlideNumber < 5) {
-        var x;
-        for (x = currentSlideNumber; x < 5; x++) {
-            $(".tag").eq(x).removeClass("up-scroll").addClass("down-scroll");
-        }
-        currentSlideNumber = 5;
-    }
+    navigation(5)
+    assignActive()
 }
 
 
-
+function navigation(toSlide) {
+    if (currentSlideNumber < toSlide) {
+        var x;
+        for (x = currentSlideNumber; x < toSlide; x++) {
+            $(".tag").eq(x).removeClass("up-scroll").addClass("down-scroll");
+        }
+        currentSlideNumber = toSlide;
+    }
+    else {
+        var x;
+        for (x = toSlide; x < currentSlideNumber; x++) {
+            $(".tag").eq(x).removeClass("down-scroll").addClass("up-scroll");
+        }
+        currentSlideNumber = toSlide;
+    }
+}

@@ -13,6 +13,13 @@ nav {
   transition: background-color 20ms linear;
 }
 
+body li {
+    text-decoration: none !important;
+    color: black;
+    font-size:1.1em; 
+    font-weight: 310;
+}
+
 body a {
     text-decoration: none !important;
     color: black;
@@ -20,6 +27,15 @@ body a {
 
 body a:hover {
     color: #0085CC;
+}
+
+body li:hover {
+    color: #0085CC;
+    cursor: pointer;
+}
+
+nav img:hover {
+    cursor: pointer;
 }
 
 body .active {
