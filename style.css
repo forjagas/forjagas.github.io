@@ -7,29 +7,14 @@ nav {
     width: 100%;
 }
 
-.navbar-fixed-top.scrolled {
-  background-color: white !important;
-  box-shadow: 0px 5px 5px #bbbbbb;
-  transition: background-color 20ms linear;
-}
-
-body li {
+nav li {
     text-decoration: none !important;
     color: black;
     font-size:1.1em; 
     font-weight: 310;
 }
 
-body a {
-    text-decoration: none !important;
-    color: black;
-}
-
-body a:hover {
-    color: #0085CC;
-}
-
-body li:hover {
+nav li:hover {
     color: #0085CC;
     cursor: pointer;
 }
@@ -38,7 +23,16 @@ nav img:hover {
     cursor: pointer;
 }
 
-body .active {
+nav .active {
+    color: #0085CC;
+}
+
+body a {
+    text-decoration: none !important;
+    color: black;
+}
+
+body a:hover {
     color: #0085CC;
 }
 
@@ -55,6 +49,8 @@ body .active {
     background-size: cover;
     background-position: center center;
 }
+
+
 
 .tag {
   overflow: hidden;
@@ -119,11 +115,6 @@ body .active {
   will-change: transform;
   backface-visibility: hidden;
   transition: all 1.7s cubic-bezier(0.22, 0.44, 0, 1);
-}
-
-.content-title {
-  font-size: 12vh;
-  line-height: 1.4;
 }
 
 .tag.up-scroll {
