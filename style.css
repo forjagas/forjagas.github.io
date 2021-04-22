@@ -117,6 +117,70 @@ body a:hover {
   transition: all 1.7s cubic-bezier(0.22, 0.44, 0, 1);
 }
 
+#sobre p {
+    font-weight: 300;
+    font-size: 1em;
+}
+
+#sobre #title {
+    font-size: 1.5em;
+    font-weight: 400;
+}
+
+#sobre i {
+    font-size:1.1em; 
+    margin-right: 2.5%; 
+    color: #023E8D;
+}
+
+@media only screen and (max-height: 630px) {
+    #sobre p {
+        font-size: 0.95em;
+    }
+
+    #sobre i {
+        font-size:1em; 
+    }
+
+    #sobre img {
+        transform: scale(0.8);
+    }
+
+    #sobre #title {
+        font-size: 1.2em;
+    }
+
+    #sobre iframe {
+        height: 100px;
+    }
+
+    #sobre img {
+        padding: 1px;
+    }
+}
+
+@media only screen and (max-height: 580px) {
+    #sobre p {
+        font-size: 0.85em;
+    }
+
+    #sobre img {
+        transform: scale(0.7);
+    }
+
+    #sobre #title {
+        font-size: 1.2em;
+    }
+
+    #sobre iframe {
+        height: 100px;
+    }
+
+    #sobre img {
+        padding: 1px;
+    }
+}
+
 .tag.up-scroll {
   transform: translate3d(0, -15vh, 0);
 }
