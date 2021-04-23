@@ -51,8 +51,11 @@ function slideDurationTimeout(slideDuration) {
 }
 
 // ------------- ADD EVENT LISTENER ------------- //
-var mousewheelEvent = isFirefox ? "DOMMouseScroll" : "wheel";
-window.addEventListener(mousewheelEvent, _.throttle(parallaxScroll, 60), false);
+const mediaQuery = window.matchMedia('(min-width: 992px)')
+if (mediaQuery.matches) {
+    var mousewheelEvent = isFirefox ? "DOMMouseScroll" : "wheel";
+    window.addEventListener(mousewheelEvent, _.throttle(parallaxScroll, 60), false);
+}
 
 function assignActive() {
     if (currentSlideNumber == 0) {
