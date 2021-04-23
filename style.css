@@ -155,7 +155,7 @@ body a:hover {
     color: #023E8D;
 }
 
-@media only screen and (max-height: 630px) {
+@media only screen and (max-height: 630px) and (min-width: 992px) {
     #sobre p {
         font-size: 0.95em;
     }
@@ -181,7 +181,7 @@ body a:hover {
     }
 }
 
-@media only screen and (max-height: 580px) {
+@media only screen and (max-height: 580px) and (min-width: 992px) {
     #sobre p {
         font-size: 0.85em;
     }
@@ -227,7 +227,7 @@ body a:hover {
     width: 20%;
 }
 
-@media only screen and (max-height: 700px) {
+@media only screen and (max-height: 700px) and (min-width: 992px) {
     #climatizacaoaquecimento #title {
         width: 60%;
     }
@@ -245,7 +245,7 @@ body a:hover {
     }
 }
 
-@media only screen and (max-height: 650px) {
+@media only screen and (max-height: 650px) and (min-width: 992px) {
     #climatizacaoaquecimento #title {
         width: 60%;
     }
@@ -263,7 +263,7 @@ body a:hover {
     }
 }
 
-@media only screen and (max-height: 580px) {
+@media only screen and (max-height: 580px) and (min-width: 992px) {
     #climatizacaoaquecimento #title {
         width: 50%;
     }
@@ -295,7 +295,7 @@ body a:hover {
     font-size: 0.95em;
 }
 
-@media only screen and (max-height: 650px) {
+@media only screen and (max-height: 650px) and (min-width: 992px) {
     #assistencia #title {
         width: 25%;
     }
@@ -312,7 +312,7 @@ body a:hover {
     }
 }
 
-@media only screen and (max-height: 580px) {
+@media only screen and (max-height: 580px) and (min-width: 992px) {
     #assistencia #title {
         width: 20%;
     }
