@@ -22,7 +22,7 @@
 </head>
 
 <body>
-    <div class="">
+    <div class="d-none d-lg-block">
         <header>
             <div class="fixed-top">
                 <div class="navbar-fixed-top">
@@ -608,7 +608,7 @@
             style="width: 100%; position: relative; overflow: scroll; min-height: 100vh; background-color: #f4f4f4;">
             <div class="container mt-4 text-center">
                 <div>
-                    <img src="img/eletrodomesticos_txt.png" style="width: 65%;" alt="logo">
+                    <img src="img/eletrodomesticos_txt.png" style="width: 75%;" alt="logo">
                 </div>
 
                 <p style="font-weight: 400; font-size: 1.3em;">Venda e instalação de pequenos e grandes
@@ -621,7 +621,7 @@
             style="width: 100%; position: relative; overflow: scroll; min-height: 100vh; background-color: #fff;">
             <div class="container">
                 <div class="text-center" style="position: absolute; z-index: 10; margin-top: -2em;">
-                    <img src="img/gas.png" style="width: 30%;" alt="gas">
+                    <img src="img/gas.png" style="width: 20%;" alt="gas">
                     <p style="font-weight: 400; font-size: 1.3em;">Venda e distribuição de gás engarrafado e pellets
                     </p>
                 </div>
@@ -637,15 +637,167 @@
             </div>
         </div>
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.1/lodash.min.js"></script>
-        <script src="./parallax.js"></script>
+        <div class="d-flex justify-content-center align-items-center" id="assistencia"
+            style="width: 100%; position: relative; overflow: scroll; min-height: 100vh; background-color: #f4f4f4;">
+            <div class="container mt-4 text-center">
+                <div>
+                    <img src="img/assistencia.png" id="title" alt="logo" style="width: 50%;">
 
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-            crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-            integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-            crossorigin="anonymous"></script>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 col-sm-12 mt-4 d-flex align-items-stretch">
+                        <div class="card text-center mx-auto">
+                            <div>
+                                <p class="pt-2 card-title">Certificado nº
+                                    SAC-918/2016</p>
+                            </div>
+                            <div class="card-body d-flex align-items-center"
+                                style="background-image: url('img/certif2.png');">
+                                <p class="text-left">
+                                    Serviço certificado de instalação, reparação, manutenção ou assistência técnica
+                                    e
+                                    desmantelamento de equipamentos fixos
+                                    de refrigeração, ar condicionados e bombas de calor.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-sm-12 mt-4 d-flex align-items-stretch">
+                        <div class="card text-center mx-auto">
+                            <div>
+                                <p class="pt-2 card-title">Certificado nº
+                                    122375-PUB</p>
+                            </div>
+                            <div class="card-body d-flex align-items-center"
+                                style="background-image: url('img/impic2.png');">
+                                <p class="text-left">
+                                    Certificado de empreiteiro e obras públicas. Habilitações:
+                                    <br>e) Canalizações e condutas em edifícios;
+                                    <br>m) Aquecimento, ventilação, ar condicionados e refrigeração;
+                                    <br>o) Gestão técnica centralizada.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 col-sm-12 mt-4 d-flex align-items-stretch">
+                        <div class="card text-center mx-auto">
+                            <div>
+                                <p class="pt-2 card-title">Alvará Nº
+                                    5017/P
+                                </p>
+                            </div>
+                            <div class="card-body d-flex align-items-center"
+                                style="background-image: url('img/dge2.png');">
+                                <p class="text-left">
+                                    Licença para armazenagem e tratamento industrial de petróleos brutos, seus
+                                    derivados
+                                    e resíduos.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-sm-12 mt-4 d-flex align-items-stretch">
+                        <div class="card text-center mx-auto">
+                            <div>
+                                <p class="pt-2 card-title">Registo Nº
+                                    1211876039</p>
+                            </div>
+                            <div class="card-body d-flex align-items-center"
+                                style="background-image: url('img/enmc.png');">
+                                <p class="text-left">
+                                    Distribuidor autorizado de gases e petróleos liquefeitos.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 col-sm-12 mt-4 d-flex align-items-stretch">
+                        <div class="card text-center mx-auto">
+                            <div>
+                                <p class="pt-2 card-title">Número: FLU
+                                    2394
+                                </p>
+                            </div>
+                            <div class="card-body d-flex align-items-center"
+                                style="background-image: url('img/centerm.png');">
+                                <p class="text-left">
+                                    Manuseamento de gases fluorados com efeito de estufa em equipamentos fixos de
+                                    refrigeração, ar condicionado e bombas de calor categoria I.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-sm-12 mt-4 d-flex align-items-stretch">
+                        <div class="card text-center mx-auto">
+                            <div>
+                                <p class="pt-2 card-title">Certificado
+                                    Formação Profissional</p>
+                            </div>
+                            <div class="card-body d-flex align-items-center"
+                                style="background-image: url('img/cenatex.png');">
+                                <p class="text-left">
+                                    Caldeiras domésticas, aquecimento e suas aplicações.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mb-4">
+                    <div class="col-md-6 col-sm-12 mt-4 d-flex align-items-stretch">
+                        <div class="card text-center mx-auto">
+                            <div>
+                                <p class="pt-2 card-title">Certificado
+                                    Formação Profissional
+                                </p>
+                            </div>
+                            <div class="card-body d-flex align-items-center"
+                                style="background-image: url('img/ineti.png');">
+                                <p class="text-left">
+                                    Instaladores de equipamentos de solar térmico.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-sm-12 mt-4 d-flex align-items-stretch">
+                        <div class="card text-center mx-auto">
+                            <div>
+                                <p class="pt-2 card-title">
+                                    Eletrodomésticos
+                                </p>
+                            </div>
+                            <div class="card-body d-flex align-items-center"
+                                style="background-image: url('img/eletrodomesticos_assis.png');">
+                                <p class="text-left">
+                                    Assistência a linha branca e castanha.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.1/lodash.min.js"></script>
+    <script src="./parallax.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
 
 </body>
 

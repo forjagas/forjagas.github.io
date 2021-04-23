@@ -329,6 +329,18 @@ body a:hover {
     }
 }
 
+@media only screen and (max-width: 992px) {
+    #assistencia .card {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    #assistencia .card {
+        width: 80%;
+    }
+}
+
 .tag.up-scroll {
   transform: translate3d(0, -15vh, 0);
 }
