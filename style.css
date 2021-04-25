@@ -227,7 +227,7 @@ body a:hover {
     width: 20%;
 }
 
-@media only screen and (max-height: 700px) and (min-width: 992px) {
+@media only screen and (max-height: 720px) and (min-width: 992px) {
     #climatizacaoaquecimento #title {
         width: 60%;
     }
@@ -343,11 +343,11 @@ body a:hover {
 
 @media only screen and (max-width: 768px) {
     #gas_txt {
-        width: 80%;
+        width: 100%;
     }
 
     #botijas {
-        width: 120%;
+        width: 100%;
     }
 }
 
