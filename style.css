@@ -101,6 +101,12 @@ body a:hover {
     font-size: 0.9em;
 }
 
+@media only screen and (max-width: 500px) {
+    #contactos #text {
+        font-size: 0.7em;
+    }
+}
+
 .tag {
   overflow: hidden;
   will-change: transform;
