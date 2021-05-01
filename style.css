@@ -1,5 +1,6 @@
 html, body {
   overflow-x: hidden;
+  color: #000;
 }
 
 nav {
@@ -72,7 +73,33 @@ body a:hover {
     background-position: center center;
 }
 
+#contactos {
+    color: #fff;
+}
 
+#contactos a {
+    color: #fff;
+}
+
+#contactos a:hover {
+    color: #0085CC;
+}
+
+#contactos i {
+    color: #fff;
+    font-size:1.1em; 
+    margin-right: 2.5%; 
+}
+
+#contactos #title {
+    font-size: 1.3em;
+    font-weight: 500;
+}
+
+
+#contactos #text {
+    font-size: 0.9em;
+}
 
 .tag {
   overflow: hidden;
@@ -142,17 +169,6 @@ body a:hover {
 #sobre p {
     font-weight: 300;
     font-size: 1em;
-}
-
-#sobre #title {
-    font-size: 1.5em;
-    font-weight: 400;
-}
-
-#sobre i {
-    font-size:1.1em; 
-    margin-right: 2.5%; 
-    color: #023E8D;
 }
 
 @media only screen and (max-height: 630px) and (min-width: 992px) {
@@ -293,6 +309,7 @@ body a:hover {
     border-top: 1px solid #e0e2e3;
     font-weight: 400; 
     font-size: 0.95em;
+    text-shadow: 1px 1px #ffffff;
 }
 
 @media only screen and (max-height: 650px) and (min-width: 992px) {
