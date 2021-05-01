@@ -103,7 +103,11 @@ body a:hover {
 
 @media only screen and (max-width: 500px) {
     #contactos #text {
-        font-size: 0.6em;
+        font-size: 0.55em;
+    }
+
+    #contactos iframe {
+        height: 115;
     }
 }
 
