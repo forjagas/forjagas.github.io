@@ -4,7 +4,7 @@ var isIe = (/MSIE/i.test(navigator.userAgent)) || (/Trident.*rv\:11\./i.test(nav
 var scrollSensitivitySetting = 50; //Increase/decrease this number to change sensitivity to trackpad gestures (up = less sensitive; down = more sensitive) 
 var slideDurationSetting = 1000; //Amount of time for which slide is "locked"
 var currentSlideNumber = 0;
-var totalSlideNumber = $(".tag").length;
+var totalSlideNumber = $(".sec").length;
 
 // ------------- DETERMINE DELTA/SCROLL DIRECTION ------------- //
 function parallaxScroll(evt) {
@@ -25,6 +25,9 @@ function parallaxScroll(evt) {
         if (delta <= -scrollSensitivitySetting) {
             //Down scroll
             ticking = true;
+            if (currentSlideNumber == 5) {
+                handleContactsUp();
+            }
             if (currentSlideNumber !== totalSlideNumber - 1) {
                 currentSlideNumber++;
                 nextItem();
@@ -34,10 +37,19 @@ function parallaxScroll(evt) {
         if (delta >= scrollSensitivitySetting) {
             //Up scroll
             ticking = true;
-            if (currentSlideNumber !== 0) {
-                currentSlideNumber--;
+
+            var contact = document.getElementById("contactos");
+            const contact_display = contact.style.display
+
+            if (currentSlideNumber == 5 && contact_display == "initial") {
+                handleContactsDown();
             }
-            previousItem();
+            else {
+                if (currentSlideNumber !== 0) {
+                    currentSlideNumber--;
+                    previousItem();
+                }
+            }
             slideDurationTimeout(slideDurationSetting);
         }
     }
@@ -162,15 +174,38 @@ function assignActive() {
     }
 }
 
+function handleContactsUp() {
+    var assist = document.getElementById("assistencia_conteudo");
+    var transform = "translate3d(0, -40vh, 0)";
+
+    assist.style.transform = transform;
+    assist.style.msTransform = transform;
+
+    var contact = document.getElementById("contactos");
+    contact.style.display = "initial";
+    contact.style.zIndex = 0;
+}
+
+function handleContactsDown() {
+    var assist = document.getElementById("assistencia_conteudo");
+    var transform = "translate3d(0, 20vh, 0)";
+
+    assist.style.transform = transform;
+    assist.style.msTransform = transform;
+
+    var contact = document.getElementById("contactos");
+    contact.style.display = "none";
+}
+
 // ------------- SLIDE MOTION ------------- //
 function nextItem() {
-    var $previousSlide = $(".tag").eq(currentSlideNumber - 1);
+    var $previousSlide = $(".sec").eq(currentSlideNumber - 1);
     $previousSlide.removeClass("up-scroll").addClass("down-scroll");
-    assignActive()
+    assignActive();
 }
 
 function previousItem() {
-    var $currentSlide = $(".tag").eq(currentSlideNumber);
+    var $currentSlide = $(".sec").eq(currentSlideNumber);
     $currentSlide.removeClass("down-scroll").addClass("up-scroll");
     assignActive()
 }
@@ -205,19 +240,25 @@ function goAssistencia() {
     assignActive()
 }
 
+function goContactos() {
+    navigation(5)
+    assignActive()
+    handleContactsUp()
+}
+
 
 function navigation(toSlide) {
     if (currentSlideNumber < toSlide) {
         var x;
         for (x = currentSlideNumber; x < toSlide; x++) {
-            $(".tag").eq(x).removeClass("up-scroll").addClass("down-scroll");
+            $(".sec").eq(x).removeClass("up-scroll").addClass("down-scroll");
         }
         currentSlideNumber = toSlide;
     }
     else {
         var x;
         for (x = toSlide; x < currentSlideNumber; x++) {
-            $(".tag").eq(x).removeClass("down-scroll").addClass("up-scroll");
+            $(".sec").eq(x).removeClass("down-scroll").addClass("up-scroll");
         }
         currentSlideNumber = toSlide;
     }

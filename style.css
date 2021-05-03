@@ -91,14 +91,16 @@ body a:hover {
     margin-right: 2.5%; 
 }
 
-#contactos #title {
+#contactos #ctitle {
     font-size: 1.3em;
     font-weight: 500;
+    color: #fff;
 }
 
 
 #contactos #text {
     font-size: 0.9em;
+    color: #fff;
 }
 
 @media only screen and (max-width: 500px) {
@@ -108,6 +110,26 @@ body a:hover {
 
     #contactos iframe {
         height: 115;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    #contactos {
+        background-color: #444; 
+        min-height: 70vh; 
+        bottom: 0;
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+        display: none;
+    }
+
+    #contactos #text {
+        font-size: 1em;
+    }
+
+    #contactos #title {
+        font-size: 1.3em;
     }
 }
 
