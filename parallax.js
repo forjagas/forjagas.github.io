@@ -28,6 +28,9 @@ function parallaxScroll(evt) {
             if (currentSlideNumber == 5) {
                 handleContactsUp();
             }
+            if (currentSlideNumber == 4) {
+                handleContactsDown();
+            }
             if (currentSlideNumber !== totalSlideNumber - 1) {
                 currentSlideNumber++;
                 nextItem();
@@ -188,7 +191,7 @@ function handleContactsUp() {
 
 function handleContactsDown() {
     var assist = document.getElementById("assistencia_conteudo");
-    var transform = "translate3d(0, 20vh, 0)";
+    var transform = "translate3d(0, 15vh, 0)";
 
     assist.style.transform = transform;
     assist.style.msTransform = transform;
@@ -248,6 +251,9 @@ function goContactos() {
 
 
 function navigation(toSlide) {
+    if (toSlide == 5) {
+        handleContactsDown();
+    }
     if (currentSlideNumber < toSlide) {
         var x;
         for (x = currentSlideNumber; x < toSlide; x++) {
